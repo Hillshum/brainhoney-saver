@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "Brainhoney Saver",
+    "version": "0.0.1",
+
+    "page_action" : {
+        "default_title": "Save your work!",
+        "default_icon" : "icon.png"
+    },
+    
+    "permissions" : [
+        "declarativeContent"
+    ]
+    
+}
