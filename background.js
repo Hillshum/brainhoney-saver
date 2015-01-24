@@ -16,10 +16,16 @@ chrome.runtime.onInstalled.addListener(function() {
     });
 });
 
-    
-// Show the popup when clicked
-chrome.pageAction.onClicked.addListener(function(){
-    a = 1;
-    // figure this part out...
-});
 
+
+// Accept form changes from the page
+chrome.runtime.onConnect.addListener(function(port) {
+    console.assert(port.name == "quiz-fill");
+    // TODO: Actually record the stuff
+    port.onMessage.addListener(function(msg) {
+        if (msg.click == true)
+            console.log('click!');
+
+
+    })
+});
