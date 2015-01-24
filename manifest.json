@@ -9,11 +9,21 @@
 
     "page_action" : {
         "default_title": "Save your work!",
-        "default_icon" : "icon.png"
+        "default_icon" : "icon.png",
+        "default_popup": "popup.html"
+
     },
     
     "permissions" : [
         "declarativeContent"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["https://byui.brainhoney.com/Frame/Component/CoursePlayer*"],
+            "js": ["jquery.js", "data-saver.js"]
+        }
     ]
+
     
 }
